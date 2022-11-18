@@ -1,4 +1,5 @@
-import React from 'react';
+import "./components/style.css";
+import React,{useEffect, useState} from 'react';
 import {
   BrowserRouter as Router,
   Routes,
@@ -13,6 +14,12 @@ import Search from './components/Search';
 import WishList from './components/WishList';
 
 function App() {
+  const[userName,SetuserName]=useState('')
+  
+  useEffect(()=>{
+    localStorage.setItem('userName',JSON.stringify(userName))
+  },[userName]);
+
   return (
     <Router>
       <div>
@@ -30,11 +37,11 @@ function App() {
           </ul>
         </nav>
         <Routes>
-          <Route path="/search" element={<Search/>}>
+          <Route path="/search" element={<Search username={userName}/>}>
           </Route>
           <Route path="/wishlist" element={<WishList/>}>
           </Route>
-          <Route path="/" element={<Home/>}>
+          <Route path="/" element={<Home setName={SetuserName}/>}>
           </Route>
         </Routes>
       </div>

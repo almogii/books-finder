@@ -1,19 +1,13 @@
-@import url('https://fonts.googleapis.com/css2?family=Bodoni+Moda&family=Poppins:wght@300&display=swap');
-*{
-    padding: 0;
-    margin: 0;
-    font-family: 'Poppins', sans-serif;
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
-:root{
-    --primary-color:rgb(128, 103, 219);
-    --secondary-color:rgb(254, 254, 254);
-}
-body{
-    background-color: var(--primary-color);
-}
+
 code {
-  font-family: 'Poppins', sans-serif;
-}
-html{
-  font-size: 75.5%;
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
 }
